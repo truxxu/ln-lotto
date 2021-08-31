@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import styles from "./App.module.scss";
+import { Footer, Navbar } from "./molecules";
 
 function App() {
   return (
-    <div className="container-fluid">
-      <main>
+    <>
+      <Navbar />
+      <main className="container-fluid">
         <Router>
           <Switch>
             <Route path="/tickets">
@@ -17,7 +19,8 @@ function App() {
           </Switch>
         </Router>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
 
